@@ -36,8 +36,6 @@ func NewHandlers(deps Deps) *Handlers {
 
 // RegisterRoutes registers all routes to the router
 func (h *Handlers) RegisterRoutes(router *mux.Router) {
-
-	router.Use(middleware.EnableCors)
 	// API v1 routes
 	api := router.PathPrefix("/api/v1").Subrouter()
 
